@@ -1,0 +1,1256 @@
+/* =====================================================
+   BASIC RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #fff8ed;
+
+    color: #333;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    width: 100%;
+
+    background: #5b2c1f;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 15px rgba(0,0,0,0.15);
+
+}
+
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #ffd166;
+
+}
+
+
+.cart-btn {
+
+    background: #f4a261;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.cart-btn:hover {
+
+    background: #e76f51;
+
+    transform: translateY(-2px);
+
+}
+
+
+#cartCount {
+
+    background: white;
+
+    color: #5b2c1f;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    margin-left: 4px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(91,44,31,0.95),
+            rgba(91,44,31,0.55),
+            rgba(91,44,31,0.15)
+        ),
+
+        url(
+        "https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1600&q=85"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+.hero-content {
+
+    max-width: 600px;
+
+}
+
+
+.small-title {
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #ffd166;
+
+}
+
+
+.hero h1 {
+
+    font-size: 65px;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+
+}
+
+
+.hero p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 530px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-btn {
+
+    display: inline-block;
+
+    background: #f4a261;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-btn:hover {
+
+    background: #e76f51;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-section {
+
+    text-align: center;
+
+    padding: 55px 7% 40px;
+
+}
+
+
+.search-section h2 {
+
+    font-size: 35px;
+
+    color: #5b2c1f;
+
+    margin-bottom: 8px;
+
+}
+
+
+.search-text {
+
+    color: #777;
+
+    margin-bottom: 25px;
+
+}
+
+
+.search-box {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.08);
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+.search-box input,
+.search-box select {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+.search-box input:focus,
+.search-box select:focus {
+
+    border-color: #f4a261;
+
+    box-shadow:
+        0 0 0 2px rgba(244,162,97,0.15);
+
+}
+
+
+/* =====================================================
+   PET SECTION
+===================================================== */
+
+.pets-section {
+
+    padding: 40px 7% 80px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 30px;
+
+}
+
+
+.section-heading span {
+
+    color: #e76f51;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2 {
+
+    color: #5b2c1f;
+
+    font-size: 34px;
+
+    margin-top: 8px;
+
+}
+
+
+#resultCount {
+
+    color: #777;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   PET GRID
+===================================================== */
+
+.pet-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =====================================================
+   PET CARD
+===================================================== */
+
+.pet-card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+}
+
+
+.pet-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
+
+}
+
+
+.pet-image {
+
+    height: 230px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.pet-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+
+}
+
+
+.pet-card:hover .pet-image img {
+
+    transform: scale(1.08);
+
+}
+
+
+.badge {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    background: #f4a261;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   PET INFO
+===================================================== */
+
+.pet-info {
+
+    padding: 20px;
+
+}
+
+
+.pet-info h3 {
+
+    color: #5b2c1f;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.pet-info p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.pet-info h4 {
+
+    color: #e76f51;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.pet-info button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #5b2c1f;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.pet-info button:hover {
+
+    background: #e76f51;
+
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 50px;
+
+    font-size: 20px;
+
+    color: #777;
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+
+    padding: 90px 8%;
+
+    background: #f5e5d3;
+
+}
+
+
+.about-content {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.about-content > span {
+
+    color: #e76f51;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.about h2 {
+
+    font-size: 40px;
+
+    color: #5b2c1f;
+
+    margin: 15px 0 20px;
+
+}
+
+
+.about p {
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 35px;
+
+}
+
+
+.features div {
+
+    background: white;
+
+    padding: 25px 15px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 22px;
+
+}
+
+
+.features strong {
+
+    color: #5b2c1f;
+
+    font-size: 16px;
+
+}
+
+
+.features small {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #3a1d15;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+}
+
+
+footer h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+
+}
+
+
+footer p {
+
+    margin: 8px;
+
+    color: #ddd;
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2000;
+
+    padding: 20px;
+
+}
+
+
+.modal-content {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.3);
+
+}
+
+
+.modal-content h2 {
+
+    color: #5b2c1f;
+
+    margin-bottom: 20px;
+
+}
+
+
+.close {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 12px;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    color: #777;
+
+}
+
+
+.close:hover {
+
+    color: #e76f51;
+
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+    gap: 15px;
+
+}
+
+
+.cart-item-info strong {
+
+    color: #5b2c1f;
+
+}
+
+
+.cart-item-info p {
+
+    color: #777;
+
+    margin-top: 5px;
+
+}
+
+
+.cart-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.cart-controls button {
+
+    border: none;
+
+    background: #5b2c1f;
+
+    color: white;
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.cart-controls span {
+
+    min-width: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+
+.cart-total {
+
+    text-align: right;
+
+    margin: 25px 0;
+
+}
+
+
+.cart-total h3 {
+
+    color: #e76f51;
+
+    font-size: 24px;
+
+}
+
+
+.order-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    background: #e76f51;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+}
+
+
+.order-btn:hover {
+
+    background: #5b2c1f;
+
+}
+
+
+.empty-cart {
+
+    text-align: center;
+
+    padding: 35px;
+
+    color: #777;
+
+}
+
+
+/* =====================================================
+   ORDER FORM
+===================================================== */
+
+.order-content {
+
+    max-width: 500px;
+
+}
+
+
+.cod {
+
+    background: #fff3cd;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    color: #856404;
+
+}
+
+
+.order-content form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.order-content label {
+
+    font-weight: bold;
+
+    color: #5b2c1f;
+
+    margin-top: 5px;
+
+}
+
+
+.order-content input,
+.order-content textarea {
+
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+
+.order-content input:focus,
+.order-content textarea:focus {
+
+    border-color: #f4a261;
+
+}
+
+
+.confirm-btn {
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+
+    background: #5b2c1f;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.confirm-btn:hover {
+
+    background: #e76f51;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .pet-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .features {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 50px;
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+    }
+
+
+    nav {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+
+    .logo {
+
+        font-size: 23px;
+
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+
+        padding: 50px 7%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .search-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .section-heading {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .pet-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .pet-image {
+
+        height: 180px;
+
+    }
+
+
+    .pet-info {
+
+        padding: 14px;
+
+    }
+
+
+    .pet-info h3 {
+
+        font-size: 17px;
+
+    }
+
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .pet-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pet-image {
+
+        height: 240px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 35px;
+
+    }
+
+}

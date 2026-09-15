@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PetNest - Online Pet Marketplace</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+        🐾 PetNest
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#pets">Pets</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+
+        🛒 Cart
+
+        <span id="cartCount">0</span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="small-title">
+            FIND YOUR NEW BEST FRIEND
+        </span>
+
+        <h1>
+            Find a Pet<br>
+            You'll Love ❤️
+        </h1>
+
+        <p>
+            Discover adorable pets from different categories,
+            compare prices and find your perfect companion.
+        </p>
+
+        <a href="#pets" class="hero-btn">
+            Explore Pets
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH SECTION
+===================================================== -->
+
+<section class="search-section">
+
+    <h2>
+        Find Your Perfect Pet 🔎
+    </h2>
+
+    <p class="search-text">
+        Search by pet name, breed or category
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search pet name, breed or category..."
+            onkeyup="searchPets()"
+        >
+
+
+        <select
+            id="categoryFilter"
+            onchange="filterPets()">
+
+            <option value="all">
+                All Pets
+            </option>
+
+            <option value="dog">
+                🐶 Dogs
+            </option>
+
+            <option value="cat">
+                🐱 Cats
+            </option>
+
+            <option value="rabbit">
+                🐰 Rabbits
+            </option>
+
+            <option value="hamster">
+                🐹 Hamsters
+            </option>
+
+            <option value="guinea">
+                🐹 Guinea Pigs
+            </option>
+
+            <option value="bird">
+                🐦 Birds
+            </option>
+
+            <option value="fish">
+                🐠 Aquarium Fish
+            </option>
+
+        </select>
+
+
+        <select
+            id="priceFilter"
+            onchange="filterPets()">
+
+            <option value="all">
+                All Prices
+            </option>
+
+            <option value="low">
+                Under ₹5,000
+            </option>
+
+            <option value="medium">
+                ₹5,000 - ₹15,000
+            </option>
+
+            <option value="high">
+                Above ₹15,000
+            </option>
+
+        </select>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PET SECTION
+===================================================== -->
+
+<section
+    class="pets-section"
+    id="pets">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span>
+                OUR PETS
+            </span>
+
+            <h2>
+                Pets Looking For A Home 🐾
+            </h2>
+
+        </div>
+
+        <p id="resultCount">
+            0 pets found
+        </p>
+
+    </div>
+
+
+    <!-- JavaScript will create pet cards here -->
+
+    <div
+        class="pet-grid"
+        id="petGrid">
+    </div>
+
+
+    <div
+        id="noResults"
+        class="no-results">
+
+        😔 No pets found.
+
+        <br>
+
+        Try another search.
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
+
+<section
+    class="about"
+    id="about">
+
+    <div class="about-content">
+
+        <span>
+            ABOUT PETNEST
+        </span>
+
+        <h2>
+            A Simple Way To Find Your New Companion
+        </h2>
+
+        <p>
+
+            PetNest is a frontend online pet marketplace
+            project where users can browse different pets,
+            search by breed, filter by category and price,
+            add pets to cart and place a Cash on Delivery
+            demo order.
+
+        </p>
+
+
+        <div class="features">
+
+            <div>
+                🐾
+                <strong>Pet Listings</strong>
+                <small>Many pet varieties</small>
+            </div>
+
+
+            <div>
+                🔎
+                <strong>Easy Search</strong>
+                <small>Find pets quickly</small>
+            </div>
+
+
+            <div>
+                💰
+                <strong>Budget Friendly</strong>
+                <small>Different price ranges</small>
+            </div>
+
+
+            <div>
+                📦
+                <strong>COD Order</strong>
+                <small>Simple demo ordering</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contact">
+
+    <h2>
+        🐾 PetNest
+    </h2>
+
+    <p>
+        Find your perfect companion.
+    </p>
+
+    <p>
+        📧 support@petnest.com
+    </p>
+
+    <p>
+        © 2026 PetNest | Frontend Project
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CART MODAL
+===================================================== -->
+
+<div
+    id="cartModal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <span
+            class="close"
+            onclick="closeCart()">
+
+            ×
+
+        </span>
+
+
+        <h2>
+            🛒 Your Cart
+        </h2>
+
+
+        <div
+            id="cartItems"
+            class="cart-items">
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <h3>
+                Total:
+                ₹<span id="cartTotal">0</span>
+            </h3>
+
+        </div>
+
+
+        <button
+            class="order-btn"
+            onclick="openOrderForm()">
+
+            📦 Order Now - Cash on Delivery
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ORDER MODAL
+===================================================== -->
+
+<div
+    id="orderModal"
+    class="modal">
+
+    <div class="modal-content order-content">
+
+        <span
+            class="close"
+            onclick="closeOrderForm()">
+
+            ×
+
+        </span>
+
+
+        <h2>
+            📦 Place Your Order
+        </h2>
+
+
+        <p class="cod">
+
+            💵 Payment Method:
+            <strong>Cash on Delivery</strong>
+
+        </p>
+
+
+        <form
+            onsubmit="placeOrder(event)">
+
+
+            <label>
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>
+                Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter 10 digit mobile number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+
+            <label>
+                Delivery Address
+            </label>
+
+            <textarea
+                id="address"
+                placeholder="Enter delivery address"
+                rows="4"
+                required>
+            </textarea>
+
+
+            <button
+                type="submit"
+                class="confirm-btn">
+
+                ✅ Confirm Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
